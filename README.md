@@ -16,17 +16,19 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 ### Escalabilidad Serverless (Functions)
 
-1. Cree una Function App tal cual como se muestra en las  imagenes.
+__1. Cree una Function App tal cual como se muestra en las  imagenes.__  
 
 ![](images/part3/part3-function-config.png)
 
-![](images/part3/part3-function-configii.png)
+![](images/part3/part3-function-configii.png)  
+Se crea el function app como se indica:  
+![image](https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812766/e8fd4820-6268-498f-8467-5ee4551e8b35)  
 
-2. Instale la extensión de **Azure Functions** para Visual Studio Code.
+__2. Instale la extensión de **Azure Functions** para Visual Studio Code.__  
 
 ![](images/part3/part3-install-extension.png)
 
-3. Despliegue la Function de Fibonacci a Azure usando Visual Studio Code. La primera vez que lo haga se le va a pedir autenticarse, siga las instrucciones.
+__3. Despliegue la Function de Fibonacci a Azure usando Visual Studio Code. La primera vez que lo haga se le va a pedir autenticarse, siga las instrucciones.__  
 
 ![](images/part3/part3-deploy-function-1.png)
 
