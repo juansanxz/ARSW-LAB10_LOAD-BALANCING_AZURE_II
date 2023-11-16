@@ -32,13 +32,22 @@ __3. Despliegue la Function de Fibonacci a Azure usando Visual Studio Code. La p
 
 ![](images/part3/part3-deploy-function-1.png)
 
-![](images/part3/part3-deploy-function-2.png)
+![](images/part3/part3-deploy-function-2.png)  
+Se clona el proyecto para abrirlo en Visual Studio:  
+![image](https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812766/9625bd98-73fe-4495-a035-eb358e8a8524)  
+Se pone la versión 8.0.0:  
+![image](https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812766/1cef0e91-d7b5-4ec0-b1c8-48a9e9629e52)  
 
-4. Dirijase al portal de Azure y pruebe la function.
 
-![](images/part3/part3-test-function.png)
+__4. Dirijase al portal de Azure y pruebe la function.__  
 
-5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 10 peticiones concurrentes. Verifique los resultados y presente un informe.
+![](images/part3/part3-test-function.png)  
+Se hace la siguiente prueba:  
+![image](https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812766/428b51db-1ff0-4a3a-b6eb-b4afe5eac4ce)  
+Y se obtiene el siguiente resultado:  
+![image](https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812766/7e2fc40f-af3c-43c4-9e5b-68102711d3a3)
+
+__5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 10 peticiones concurrentes. Verifique los resultados y presente un informe.__  
 
 6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
 
