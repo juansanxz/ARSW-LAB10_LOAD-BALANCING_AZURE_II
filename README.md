@@ -48,8 +48,29 @@ Y se obtiene el siguiente resultado:
 ![image](https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812766/7e2fc40f-af3c-43c4-9e5b-68102711d3a3)
 
 __5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 10 peticiones concurrentes. Verifique los resultados y presente un informe.__  
+  A continuación se presenta los resultados de las 10 peticiones realizadas de manera concurrente, con 10 iteraciones cada una:  
+  1.  
+  ![image](https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812331/9c7f9dc8-82bd-4fda-a140-7ab203060473)  
+  2.  
+  <img width="517" alt="image" src="https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812331/390567e5-c166-4cd4-a100-8bf4e5d1d32a">  
+  3.  
+  <img width="516" alt="image" src="https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812331/2b1118fe-2a35-41fe-a0c6-99b728526554">  
+  4.  
+  <img width="516" alt="image" src="https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812331/174de2c3-8412-4cac-940d-eb087fbec54c">  
+  5.  
+  <img width="504" alt="image" src="https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812331/a2ff90c0-b93d-46af-a033-78bb48abc64f">  
+  6.  
+  <img width="500" alt="image" src="https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812331/6f773be9-2e4d-4a4d-beb3-2b06223cb05a">  
+  7.  
+  <img width="516" alt="image" src="https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812331/9745b3d1-5c37-48b1-93ff-f528226eee74">  
+  8.  
+  <img width="517" alt="image" src="https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812331/958ac065-fd30-4642-b9ec-22d145ea22e2">  
+  9.  
+  <img width="516" alt="image" src="https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812331/15ee841a-e884-40d6-bd0e-d303e98c0022">  
+  10.  
+  <img width="520" alt="image" src="https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812331/4282455b-5e54-40f5-b4f3-2744432593c3">  
 
-6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
+__6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.__
 
 **Preguntas**
 
