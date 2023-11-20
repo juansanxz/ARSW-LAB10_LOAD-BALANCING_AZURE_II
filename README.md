@@ -70,6 +70,13 @@ __5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 
   10.  
   <img width="520" alt="image" src="https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812331/4282455b-5e54-40f5-b4f3-2744432593c3">  
 
+  Realizando algunas observaciones, se puede afirmar lo siguiente:  
+  
+  *   El tiempo de ejecución, así como el tiempo promedio de respuesta fueron aumentando con cada petición.
+  *   Desde la segunda petición, el tiempo de ejecución y el tiempo promedio de respuesta no tuvieron un incremento demasiado grande, mientras que si hubo uno bastante notable con respecto a la primera petición.
+  *   El tiempo de ejecución fue desde los 6 minutos en la primera petición, hasta los 9 en la última realizada.
+  *   En ninguna de las peticiones hubo iteraciones o solicitudes fallidas.
+
 __6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.__
 
 **Preguntas**
