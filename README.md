@@ -81,18 +81,18 @@ __6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez
 
 **Preguntas**
 
-__* ¿Qué es un Azure Function?__  
+* __¿Qué es un Azure Function?__  
   Azure Functions es una plataforma de proceso sin servidor controlada por eventos que ayuda a desarrollar de forma más eficaz con cualquier lenguaje de programación. Este servicio de la nube puede ser usado para la creación de API web responder a los cambios en las bases de datos, procesar secuencias de IoT, administrar colas de mensajes, etc.  
-__* ¿Qué es serverless?__  
+* __¿Qué es serverless?__  
   Serverless es un modelo de desarrollo de software en donde el programador se centra exclusivamente en escribir código sin preocuparse de la administración ni gestión de servidores para su ejecución. En este entorno, toda la infraestructura es proporcionada por el proveedor de servicios de nube seleccionado. Esto quiere decir que no es que no se tengan servidores, sino que su administración no recae en los desarrolladores.  
-__* ¿Qué es el runtime y que implica seleccionarlo al momento de crear el Function App?__  
+* __¿Qué es el runtime y que implica seleccionarlo al momento de crear el Function App?__  
   El runtime stack se debe seleccionar al momento de crear la función debido a que indica el entorno en el cual se va a ejecutar. El stack que se elija depende del lenguaje de programación que se haya utilizado, Azure Functions permite varios entornos como:
   * .NET: Funciones en C# o F#.
   * Node.js: Funciones en JavaScript o TypeScript.
   * Python: Funciones en Python.
   * Java: Funciones en Java.
   * Powershell: Para tareas automatizadas.  
-__* ¿Por qué es necesario crear un Storage Account de la mano de un Function App?__  
+* __¿Por qué es necesario crear un Storage Account de la mano de un Function App?__  
   Azure Functions necesita una cuenta de Azure Storage para crear una instancia de la aplicación de funciones. La aplicación de funciones podría usar los siguientes servicios de almacenamiento:
   * Azure Blob Storage:
     - Mantener el estado de los enlaces y las teclas de función 1.
@@ -106,7 +106,7 @@ __* ¿Por qué es necesario crear un Storage Account de la mano de un Function A
     - Se usa para el seguimiento de objetos mediante el desencadenador de Blob Storage.
   * Azure Table Storage:
     - Se utiliza de manera predeterminada en la central de tareas de Durable Functions.  
-__* ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.__  
+* __¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.__  
   Hay tres planes de hospedaje básico disponibles para Azure Functions: Plan de consumo, plan Premium y plan Dedicado (App Service).
   Estos planes de hospedaje los facilita la infraestructura de Azure App Service y están disponibles con carácter general (GA) en máquinas virtuales Linux y Windows.
   El plan de hospedaje de Azure Functions que elija determina los comportamientos siguientes::
@@ -138,9 +138,9 @@ __* ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se difere
     - Costos fijos: Se paga una tarifa fija por el plan de App Service, independientemente de la cantidad de recursos utilizados.
     - Escalado manual: Se debe configurar y gestionar el escalado manualmente. No escala automáticamente como en el plan de consumo o Premium.
     - Potencialmente mayor costo: Puede ser más costoso que el plan de consumo para cargas de trabajo con picos intermitentes o bajos volúmenes de tráfico.  
-__* ¿Por qué la memoization falla o no funciona de forma correcta?__  
+* __¿Por qué la memoization falla o no funciona de forma correcta?__  
   Porque se va al límite de recursión permitido cuando son tamaños muy grandes, para probar que funcionara bien, fuimos llamando de a números pequeños a la función para que la memoria se fuera llenando y así se pudiera llegar a números grandes.  
-__* ¿Cómo funciona el sistema de facturación de las Function App?__  
+* __¿Cómo funciona el sistema de facturación de las Function App?__  
   * Plan de consumo:
     Solo paga por el tiempo durante el que se ejecutan las funciones. La facturación se basa en el número de ejecuciones, el tiempo de ejecución y el uso de la memoria.
   * Plan Premium:
