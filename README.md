@@ -1,5 +1,8 @@
 ### Escuela Colombiana de Ingeniería
 ### Arquitecturas de Software - ARSW
+### Integrantes
+* Santiago Arévalo Rojas
+* Juan Felipe Sáchez Pérez
 
 ## Escalamiento en Azure con Maquinas Virtuales, Sacale Sets y Service Plans
 
