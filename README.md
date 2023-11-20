@@ -77,7 +77,13 @@ __5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 
   *   El tiempo de ejecución fue desde los 6 minutos en la primera petición, hasta los 9 en la última realizada.
   *   En ninguna de las peticiones hubo iteraciones o solicitudes fallidas.
 
-__6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.__
+__6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.__  
+El límite que tiene la función al ser implementada con un enfoque recursivo y utilizando memoria, es de aproximadamente el fibonacci de 1000. Usando memoria, es posible calcular más valores, aprovechando los que ya se calcularon previamente. Por otro lado, realizando una comparación entre el cálculo del valor 100.000 por primera vez, y después de cinco minutos de haberlo hallado calcularlo nuevamente, se observa que hay una diferencia notable en los tiempos de ejecución, que se muestra a continuación:  
+En la primera petición se demora 2.8s:  
+<img width="499" alt="image" src="https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812331/1507e063-e19b-4f6b-9176-1e71bca14197">  
+
+En la segunda, cómo ya se tiene en memoria el valor, se demora menos:  
+<img width="488" alt="image" src="https://github.com/juansanxz/ARSW-LAB10_LOAD-BALANCING_AZURE_II/assets/123812331/0a2c76a7-bc87-4344-89a1-d6b6cb42d68d">  
 
 **Preguntas**
 
