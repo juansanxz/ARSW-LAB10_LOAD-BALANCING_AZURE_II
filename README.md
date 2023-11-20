@@ -81,11 +81,74 @@ __6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez
 
 **Preguntas**
 
-* ¿Qué es un Azure Function?
-* ¿Qué es serverless?
-* ¿Qué es el runtime y que implica seleccionarlo al momento de crear el Function App?
-* ¿Por qué es necesario crear un Storage Account de la mano de un Function App?
-* ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.
-* ¿Por qué la memoization falla o no funciona de forma correcta?
-* ¿Cómo funciona el sistema de facturación de las Function App?
+__* ¿Qué es un Azure Function?__  
+  Azure Functions es una plataforma de proceso sin servidor controlada por eventos que ayuda a desarrollar de forma más eficaz con cualquier lenguaje de programación. Este servicio de la nube puede ser usado para la creación de API web responder a los cambios en las bases de datos, procesar secuencias de IoT, administrar colas de mensajes, etc.  
+__* ¿Qué es serverless?__  
+  Serverless es un modelo de desarrollo de software en donde el programador se centra exclusivamente en escribir código sin preocuparse de la administración ni gestión de servidores para su ejecución. En este entorno, toda la infraestructura es proporcionada por el proveedor de servicios de nube seleccionado. Esto quiere decir que no es que no se tengan servidores, sino que su administración no recae en los desarrolladores.  
+__* ¿Qué es el runtime y que implica seleccionarlo al momento de crear el Function App?__  
+  El runtime stack se debe seleccionar al momento de crear la función debido a que indica el entorno en el cual se va a ejecutar. El stack que se elija depende del lenguaje de programación que se haya utilizado, Azure Functions permite varios entornos como:
+  * .NET: Funciones en C# o F#.
+  * Node.js: Funciones en JavaScript o TypeScript.
+  * Python: Funciones en Python.
+  * Java: Funciones en Java.
+  * Powershell: Para tareas automatizadas.  
+__* ¿Por qué es necesario crear un Storage Account de la mano de un Function App?__
+  Azure Functions necesita una cuenta de Azure Storage para crear una instancia de la aplicación de funciones. La aplicación de funciones podría usar los siguientes servicios de almacenamiento:
+  * Azure Blob Storage:
+    - Mantener el estado de los enlaces y las teclas de función 1.
+    - Se utiliza de manera predeterminada en la central de tareas de Durable Functions.
+    - Se puede usar para almacenar el código de la aplicación de funciones para la Compilación remota del Consumo para Linux o como parte de las implementaciones de URL de paquetes externos.
+  * Azure Files:
+    - Recurso compartido de archivos que se utiliza para almacenar y ejecutar el código de la aplicación de funciones en un plan de consumo y un plan prémium.
+  * Azure Queue Storage:
+    - Se utiliza de manera predeterminada en la central de tareas de Durable Functions.
+    - Se usa para el control de errores y reintentos en desencadenadores específicos de Azure Functions.
+    - Se usa para el seguimiento de objetos mediante el desencadenador de Blob Storage.
+  * Azure Table Storage:
+    - Se utiliza de manera predeterminada en la central de tareas de Durable Functions.  
+* __¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.__
+  Hay tres planes de hospedaje básico disponibles para Azure Functions: Plan de consumo, plan Premium y plan Dedicado (App Service).
+  Estos planes de hospedaje los facilita la infraestructura de Azure App Service y están disponibles con carácter general (GA) en máquinas virtuales Linux y Windows.
+  El plan de hospedaje de Azure Functions que elija determina los comportamientos siguientes::
+  * Cómo se escala la aplicación de funciones.
+  * Los recursos disponibles para cada instancia de aplicación de funciones.
+  * Compatibilidad con funcionalidad avanzada, como la conectividad con Azure Virtual Network.
+  Especificación de cada plan:
+  * Plan de consumo:
+    Ventajas:
+    - Escalado automático: Escala automáticamente en función de la demanda, lo que significa que solo pagas por el tiempo de CPU y memoria utilizados durante la ejecución de las funciones.
+    - Costos bajos para cargas de trabajo intermitentes: Ideal para aplicaciones con cargas de trabajo intermitentes o con bajos volúmenes de tráfico.
+    - Inicio rápido: Las funciones se inician rápidamente.
+    Desventajas:
+    - Límites de tiempo de ejecución y recursos: Hay límites en el tiempo máximo de ejecución y en la cantidad de recursos disponibles para una ejecución de función.
+    - Inicio en frío: Puede haber un pequeño retraso (inicio en frío) la primera vez que se ejecuta una función después de un período de inactividad.
+  * Plan Premium:
+    Ventajas:
+    - Ejecución continua: Las funciones pueden ejecutarse de forma continua sin límites de tiempo de ejecución.
+    - Escalado automático avanzado: Ofrece un escalado más rápido y mejor rendimiento en comparación con el plan de consumo.
+    - Conectividad de red: Puedes integrar la Function App con una red virtual y acceder a recursos dentro de la red.
+    Desventajas:
+    - Costos más altos que el plan de consumo: Puede ser más costoso que el plan de consumo, pero ofrece características avanzadas de escalado y rendimiento.
+  * Plan dedicado (App Service):
+    Ventajas:
+    - Control sobre la infraestructura: Se puede tener más control sobre la infraestructura subyacente, ya que compartes recursos con las aplicaciones web de Azure.
+    - Ejecución continua: Las funciones pueden ejecutarse de forma continua sin límites de tiempo de ejecución.
+    - Conectividad de red: Se puede integrar la Function App con una red virtual y acceder a recursos dentro de la red.
+    Desventajas:
+    - Costos fijos: Se paga una tarifa fija por el plan de App Service, independientemente de la cantidad de recursos utilizados.
+    - Escalado manual: Se debe configurar y gestionar el escalado manualmente. No escala automáticamente como en el plan de consumo o Premium.
+    - Potencialmente mayor costo: Puede ser más costoso que el plan de consumo para cargas de trabajo con picos intermitentes o bajos volúmenes de tráfico.    
+__* ¿Por qué la memoization falla o no funciona de forma correcta?__  
+  Porque se va al límite de recursión permitido cuando son tamaños muy grandes, para probar que funcionara bien, fuimos llamando de a números pequeños a la función para que la memoria se fuera llenando y así se pudiera llegar a números grandes.    
+__* ¿Cómo funciona el sistema de facturación de las Function App?__
+  * Plan de consumo:
+    Solo paga por el tiempo durante el que se ejecutan las funciones. La facturación se basa en el número de ejecuciones, el tiempo de ejecución y el uso de la memoria.
+  * Plan Premium:
+    El plan Premium se basa en la cantidad de núcleos por segundo y en la memoria usada en las instancias necesarias y preparadas previamente. Al menos una instancia por plan se debe mantener preparada en todo momento. Este plan ofrece los precios más predecibles.
+  * Plan dedicado:
+    Paga lo mismo por las aplicaciones de funciones en un plan de App Service que por otros recursos de App Service, como las aplicaciones web.
+  * App Service Environment (ASE):
+    Hay una tarifa plana mensual para las instancias de ASE en la que se paga por la infraestructura y que no varía según el tamaño de la instancia de ASE. Además, existe un costo por cada vCPU del plan de App Service. Todas las aplicaciones hospedadas en una instancia de ASE están en el SKU de precios Aislado.
+  * Kubernetes:
+    Solo paga los costos del clúster de Kubernetes; no existe facturación adicional para Functions. La aplicación de funciones se ejecuta como una carga de trabajo de aplicación en el clúster, al igual que una aplicación normal.
 * Informe
