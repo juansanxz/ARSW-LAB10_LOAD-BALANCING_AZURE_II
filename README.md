@@ -106,7 +106,7 @@ __* ¿Por qué es necesario crear un Storage Account de la mano de un Function A
     - Se usa para el seguimiento de objetos mediante el desencadenador de Blob Storage.
   * Azure Table Storage:
     - Se utiliza de manera predeterminada en la central de tareas de Durable Functions.  
-* __¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.__
+__* ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.__
   Hay tres planes de hospedaje básico disponibles para Azure Functions: Plan de consumo, plan Premium y plan Dedicado (App Service).
   Estos planes de hospedaje los facilita la infraestructura de Azure App Service y están disponibles con carácter general (GA) en máquinas virtuales Linux y Windows.
   El plan de hospedaje de Azure Functions que elija determina los comportamientos siguientes::
@@ -137,9 +137,11 @@ __* ¿Por qué es necesario crear un Storage Account de la mano de un Function A
     Desventajas:
     - Costos fijos: Se paga una tarifa fija por el plan de App Service, independientemente de la cantidad de recursos utilizados.
     - Escalado manual: Se debe configurar y gestionar el escalado manualmente. No escala automáticamente como en el plan de consumo o Premium.
-    - Potencialmente mayor costo: Puede ser más costoso que el plan de consumo para cargas de trabajo con picos intermitentes o bajos volúmenes de tráfico.    
+    - Potencialmente mayor costo: Puede ser más costoso que el plan de consumo para cargas de trabajo con picos intermitentes o bajos volúmenes de tráfico.
+ 
 __* ¿Por qué la memoization falla o no funciona de forma correcta?__  
   Porque se va al límite de recursión permitido cuando son tamaños muy grandes, para probar que funcionara bien, fuimos llamando de a números pequeños a la función para que la memoria se fuera llenando y así se pudiera llegar a números grandes.    
+  
 __* ¿Cómo funciona el sistema de facturación de las Function App?__
   * Plan de consumo:
     Solo paga por el tiempo durante el que se ejecutan las funciones. La facturación se basa en el número de ejecuciones, el tiempo de ejecución y el uso de la memoria.
